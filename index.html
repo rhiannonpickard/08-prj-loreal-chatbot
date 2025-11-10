@@ -22,11 +22,35 @@
         <img src="img/loreal-logo.png" alt="L'Oréal Logo" class="logo" />
         <h1 class="site-title">Smart Routine & Product Advisor</h1>
         <p class="tagline">Because You're Worth It</p>
+        <nav class="header-nav">
+          <a href="#rubric">Rubric</a>
+        </nav>
       </header>
 
       <!------- Chat Area ------->
       <main>
+        <!------- Product Selection Grid ------->
+        <section class="product-section">
+          <h2 class="section-title">Select Products for Your Routine</h2>
+          <div id="productGrid" class="product-grid">
+            <!-- Products will be dynamically generated -->
+          </div>
+        </section>
+
+        <!------- Saved Products Display ------->
+        <section class="saved-products-section">
+          <h3 class="section-subtitle">Your Selected Products (<span id="productCount">0</span>)</h3>
+          <div id="savedProducts" class="saved-products">
+            <p class="empty-state">No products selected yet. Click on products above to add them!</p>
+          </div>
+          <button id="generateRoutineBtn" class="routine-btn" style="display: none;">
+            Generate My Routine
+          </button>
+        </section>
+
+        <!------- Chatbox ------->
         <section class="chatbox">
+          <h2 class="section-title">Chat with Your Smart Advisor</h2>
           <div id="chatWindow" class="chat-window">
             <!-- messages will be appended here via JS -->
           </div>
@@ -46,6 +70,89 @@
               <span class="visually-hidden">Send</span>
             </button>
           </form>
+        </section>
+
+        <!------- Rubric Section ------->
+        <section id="rubric" class="rubric-section">
+          <h2 class="rubric-title">L'Oréal Product-Aware Routine Builder Chatbot Rubric</h2>
+          <div class="rubric-table-wrapper">
+            <table class="rubric-table">
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>Points</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Product Selection</td>
+                  <td>10</td>
+                  <td>User can select products from a grid or list to build their routine</td>
+                </tr>
+                <tr>
+                  <td>Routine Generation</td>
+                  <td>10</td>
+                  <td>AI generates personalized beauty routine based on user input and selected products</td>
+                </tr>
+                <tr>
+                  <td>Follow-Up Chat</td>
+                  <td>10</td>
+                  <td>Chatbot maintains conversation history and provides contextual responses</td>
+                </tr>
+                <tr>
+                  <td>Save Selected Products</td>
+                  <td>10</td>
+                  <td>User's product selections are saved and displayed in their routine</td>
+                </tr>
+                <tr>
+                  <td>Reveal Product Description</td>
+                  <td>5</td>
+                  <td>Clicking on products reveals detailed descriptions and information</td>
+                </tr>
+                <tr>
+                  <td>Cloudflare Worker Integration</td>
+                  <td>5</td>
+                  <td>OpenAI API calls are securely routed through Cloudflare Worker</td>
+                </tr>
+                <tr class="bonus-row">
+                  <td>LevelUp: Add Web Search</td>
+                  <td>10</td>
+                  <td><strong>BONUS:</strong> Integration with web search for real-time product information</td>
+                </tr>
+                <tr class="bonus-row">
+                  <td>LevelUp: Product Search</td>
+                  <td>10</td>
+                  <td><strong>BONUS:</strong> Search functionality for finding specific products in catalog</td>
+                </tr>
+                <tr class="bonus-row">
+                  <td>LevelUp: RTL Language Support</td>
+                  <td>5</td>
+                  <td><strong>BONUS:</strong> Right-to-left language support for international users</td>
+                </tr>
+                <tr>
+                  <td>Reflection: Prompt Writing</td>
+                  <td>10</td>
+                  <td>Documentation of system prompt design and iteration process</td>
+                </tr>
+                <tr>
+                  <td>Reflection: Overcoming Roadblocks</td>
+                  <td>10</td>
+                  <td>Written reflection on challenges faced and solutions implemented</td>
+                </tr>
+                <tr>
+                  <td>Reflection: LinkedIn Post</td>
+                  <td>10</td>
+                  <td>Professional post sharing project learnings and outcomes</td>
+                </tr>
+                <tr class="total-row">
+                  <td><strong>Total Points</strong></td>
+                  <td><strong>105</strong></td>
+                  <td><em>Including 25 bonus points</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </main>
 
